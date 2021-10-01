@@ -1,11 +1,24 @@
-<?php
-            //Decimo digito
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
 
+    <link rel="stylesheet" href="maquiagem.css">
+    <title>
+        Projetinho da Facul
+    </title>
+</head>
+<body>
+
+    <div class="title">
+        <h2 i18n="name"  align="center" id="logo">Validação de CPF</h2>
+        <p align="center">Foi feito a verificação e o resultado é: </p>
+    </div>
+
+    <a class="php">
+    <?php
+//10º digito
 $CPF = $_POST ['CPF'];
-
-$ind1 = 9;
-$decre1 = 10;
-$soma1 = 0;
+$ind1 = 9; $decre1 = 10; $soma1 = 0;
 
 for($ind1=0;$ind1<9;$ind1++)
 {
@@ -16,17 +29,9 @@ for($ind1=0;$ind1<9;$ind1++)
 $resto1 = $soma1%11;
 $sub1 = 11 - $resto1;
 
-if ($sub1>=10)
-{
-    $digit1 = 0;
-}else{
-    $digit1 = $sub1;
-}
-            //Decimo Primeiro digito
+//11º digito
 $CPF = $_POST ['CPF'];
-$ind2 = 10;
-$decre2 = 11;
-$soma2 = 0;
+$ind2 = 10; $decre2 = 11; $soma2 = 0;
 
 for($ind2=0;$ind2<10;$ind2++)
 {
@@ -37,18 +42,35 @@ for($ind2=0;$ind2<10;$ind2++)
 $resto2 = $soma2%11;
 $sub2 = 11 - $resto2;
 
-if ($sub2>=10)
+//verifica as subtrações
+if ($sub1 and $sub2 >=10)
 {
-    $digit2 = 0;
+    $digit1 and $digit2 = 0;
 }else{
+    $digit1 = $sub1;
     $digit2 = $sub2;
 }
 
-//informando a validação
+//Informando a Validação
 if ($digit1 == $CPF[9] and $digit2 == $CPF[10])
 {
     print "CPF valido";
 }else{
     print "CPF invalido";
 }
+?>
+    </a>
+
+    <div class="footer">
+        <a href="https://github.com/AlevinoSauro/ValidCPF">
+            <picture>
+                <source srcset="/ValCPF/img/webp/github_link.png" type="image/webp">
+                <img src="/ValCPF/img/github_link.png" alt="Git" />
+            </picture>
+        </a>
+    </div>
+
+</body>
+</html>
+
 

@@ -1,10 +1,14 @@
 html {
     font-family: source-sans-pro, sans-serif;
+    font-size: larger;
     font-feature-settings: "ss03" 1;
     color: rgba(0, 0, 0, 0.87);
     margin: 0;
     overflow-x: hidden;
     max-width: 100%;
+}
+.php {
+    padding-left: 47%;
 }
 button{
     border-radius: 1000px;

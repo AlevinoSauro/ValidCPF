@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
@@ -9,18 +8,18 @@
 <body>
 
     <div class="title">
-        <h2 i18n="name" id="logo">Validação de CPF</h2>
-        <p>Trabalho escolar que consiste em calcular os numeros do CPF e verificar se é um cadastro valido.</p>
+        <h2 i18n="name"  align="center" id="logo">Validação de CPF</h2>
+        <p align="center">Trabalho escolar que consiste em calcular os numeros do CPF e verificar se é um cadastro valido.</p>
     </div>
 
 <form ACTION="ValForm.php" method="post">
-    <p>Digite aqui o seu CPF:
-        <label>
+    <p align="center">Digite aqui o seu CPF:
+        <label align="center">
             <input type="text" name="CPF" placeholder="Apenas os Numeros" required
                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
         </label>
     </p>
-    </p><button type="sub"> Verificar </button></p>
+    <p align="center"><button type="sub" > Verificar </button></p>
 </form>
 
     <div class="footer">
@@ -31,7 +30,6 @@
             </picture>
         </a>
     </div>
-
 
 </body>
 </html>

@@ -1,5 +1,4 @@
 html {
-
     font-family: source-sans-pro, sans-serif;
     font-feature-settings: "ss03" 1;
     color: rgba(0, 0, 0, 0.87);
@@ -7,14 +6,10 @@ html {
     overflow-x: hidden;
     max-width: 100%;
 }
-body{
-    vertical-align: center;
-    padding-left: 40%;
-}
 button{
     border-radius: 1000px;
     padding: 15px 20px;
-    background: lightseagreen;
+    background: lightgrey;
     color: #fff;
     text-decoration: none;
     font-size: 20px;

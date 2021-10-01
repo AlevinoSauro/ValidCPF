@@ -1,4 +1,4 @@
-<html lang="pt-BR" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
 

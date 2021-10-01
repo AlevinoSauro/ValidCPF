@@ -1,5 +1,6 @@
 <?php
             //Decimo digito
+
 $CPF = $_POST ['CPF'];
 
 $ind1 = 9;

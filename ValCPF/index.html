@@ -9,7 +9,10 @@
     
     <p>Trabalho escolar que consiste em validar os numeros do CPF (Cadastro de Pessoas Físicas)</p>
 
-    <p>Digite aqui o seu CPF: <input type="text" name="CPF" placeholder="000.000.000-00" required="required"/></p>
+    <p>Digite aqui o seu CPF: <label>
+        <input type="text" name="CPF" placeholder="Apenas os Numeros" required
+               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+    </label></p>
 
     </p><button type="sub"> Enviar </button></p>
 

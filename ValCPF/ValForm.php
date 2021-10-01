@@ -15,7 +15,7 @@
     </div>
 
     <a class="php">
-    <?php
+        <?php
 //10º digito
 $CPF = $_POST ['CPF'];
 $ind1 = 9; $decre1 = 10; $soma1 = 0;

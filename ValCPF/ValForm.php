@@ -16,49 +16,48 @@
 
     <a class="php">
         <?php
-//10º digito
-$CPF = $_POST ['CPF'];
-$ind1 = 9; $decre1 = 10; $soma1 = 0;
+            //10º digito
+            $CPF = $_POST ['CPF'];
+            $ind1 = 9; $decre1 = 10; $soma1 = 0;
 
-for($ind1=0;$ind1<9;$ind1++)
-{
-    $digit1 = $CPF[$ind1] * $decre1;
-    $decre1 = $decre1-1;
-    $soma1 = $soma1 + $digit1;
-}
-$resto1 = $soma1%11;
-$sub1 = 11 - $resto1;
+            for($ind1=0;$ind1<9;$ind1++)
+            {
+                $digit1 = $CPF[$ind1] * $decre1;
+                $decre1 = $decre1-1;
+                $soma1 = $soma1 + $digit1;
+            }
+            $resto1 = $soma1%11;
+            $sub1 = 11 - $resto1;
 
-//11º digito
-$CPF = $_POST ['CPF'];
-$ind2 = 10; $decre2 = 11; $soma2 = 0;
+            //11º digito
+            $CPF = $_POST ['CPF'];
+            $ind2 = 10; $decre2 = 11; $soma2 = 0;
 
-for($ind2=0;$ind2<10;$ind2++)
-{
-    $digit2 = $CPF[$ind2] * $decre2;
-    $decre2 = $decre2-1;
-    $soma2 = $soma2 + $digit2;
-}
-$resto2 = $soma2%11;
-$sub2 = 11 - $resto2;
+            for($ind2=0;$ind2<10;$ind2++)
+            {
+                $digit2 = $CPF[$ind2] * $decre2;
+                $decre2 = $decre2-1;
+                $soma2 = $soma2 + $digit2;
+            }
+            $resto2 = $soma2%11;
+            $sub2 = 11 - $resto2;
 
-//verifica as subtrações
-if ($sub1 and $sub2 >=10)
-{
-    $digit1 and $digit2 = 0;
-}else{
-    $digit1 = $sub1;
-    $digit2 = $sub2;
-}
-
-//Informando a Validação
-if ($digit1 == $CPF[9] and $digit2 == $CPF[10])
-{
-    print "CPF valido";
-}else{
-    print "CPF invalido";
-}
-?>
+            //verifica as subtrações
+            if ($sub1 and $sub2 >=10)
+            {
+                $digit1 and $digit2 = 0;
+            }else{
+                $digit1 = $sub1;
+                $digit2 = $sub2;
+            }
+            //Informando a Validação
+            if ($digit1 == $CPF[9] and $digit2 == $CPF[10])
+            {
+                print "CPF valido";
+            }else{
+                print "CPF invalido";
+            }
+        ?>
     </a>
 
     <div class="footer">
